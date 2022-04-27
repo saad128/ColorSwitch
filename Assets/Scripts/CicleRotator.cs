@@ -6,11 +6,21 @@ public class CicleRotator : MonoBehaviour
 {
     public float rotationSpeed = 100f;
 
-   
+    GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.instance;
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0f,0f,rotationSpeed * Time.deltaTime);
+        if (gameManager.GetIsGameActive())
+        {
+            transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+        }
     }
 }

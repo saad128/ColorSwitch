@@ -9,6 +9,8 @@ TagManager:
   - Pink
   - Purple
   - ColorChanger
+  - BottomBorder
+  - TriggerOnObject
   layers:
   - Default
   - TransparentFX
